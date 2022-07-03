@@ -1,0 +1,33 @@
+name = input("What is your name: ")
+print("Welcome ", name , "to this adventure!")
+
+answer = input("You are on a trail into the forest, and the trail divide itself in two ways, left and right. Wich way would you like to go? Please select your action by typing left or right ").lower()
+if answer == "left":
+    answer = input("You come to a river, you can walk around it ou swiming across it. Plese select you action by typing swim or walk.").lower()
+    if answer == "swim":
+        print("You swim across and were eaten by a Alligator")
+    elif answer == "walk":
+        print("You walk for miles, ran out of water and lost the game.")
+    else:
+        print("Not a valid option.")
+
+
+elif answer == "right":
+    answer = input("You come to a old bridge, do you want to cross it ou read back? Please select you action by typing cross ou back.").lower()
+    if answer == "cross":
+        answer = input("You cross the bridge and meet a stranger. Do you talk to them? Please select your action by typing yes or no.").lower()
+        if answer == "yes":
+            print("You talk to the stranger and he open a portal for you to leave. You win!")
+        elif answer == "no":
+            print("You ignore the stranger and get lost into the woods. You lose!")
+        else:
+            print("Not a valid option.")
+
+    elif answer == "back":
+        print("You go back and lose the game.")
+    else:
+        print("Not a valid option.")
+else:
+    print("Not a valid option. You lose!")
+
+print("Thank you for playing " , name , "!")
